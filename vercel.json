@@ -1,0 +1,18 @@
+{
+  "regions": ["syd1"],
+  "crons": [
+    {
+      "path": "/api/cron/daily-cleanup",
+      "schedule": "0 0 * * *"
+    }
+  ],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_API_URL": "@api_url"
+  }
+} 
